@@ -191,7 +191,7 @@ def search_pa_list(src: List[str]) -> List[str]:
 
     return ["I don't understand"]
 
-def how_old(matches: List[str]) = List[str]:
+def how_old(matches: List[str]):
     name = "".join(matches)
     birth = get_birth_date(name)
     year, month, day = map(int, birth.split("-"))
@@ -204,6 +204,8 @@ def how_old(matches: List[str]) = List[str]:
     if (current_month, current_day) < (month, day):
         age-= 1
     return[str(age)]
+
+
 
 def query_loop() -> None:
     """The simple query loop. The try/except structure is to catch Ctrl-C or Ctrl-D
