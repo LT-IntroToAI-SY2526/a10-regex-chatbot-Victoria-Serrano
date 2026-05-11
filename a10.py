@@ -205,6 +205,14 @@ def how_old(matches: List[str]):
         age-= 1
     return[str(age)]
 
+def when_famous(matches"List[str]):
+    name = "".join(matches)
+    infobox = clean_text(get_first_infobox_text(get_page_html(name)))
+
+    pattern = r"Years active.*?(\d{4})
+    try:
+        m = get_match(infobox, pattern, "No fame information found")
+        return = [m.group(1)]
 
 
 def query_loop() -> None:
